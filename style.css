@@ -1,0 +1,188 @@
+
+/* General Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url("https://img00.deviantart.net/71c2/i/2015/123/8/1/michael_jackson_silhouettes_by_c_charalambous-d2617uz.jpg") repeat;
+  color: #fff;
+  font-family: "Roboto", Helvetica, sans-serif;
+  text-align: center;
+}
+
+/*========================================*/
+
+/* Page Container and Landing */
+
+#main {
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  margin: 15px 30px;
+  padding: 15px;
+}
+
+#landing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 15px;
+  height: 100vh;
+}
+
+#title-div {
+  border: 8px double #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  max-width: 700px;
+  min-height: 90px;
+  padding: 5px 10px;
+}
+
+#img-div {
+  max-width: 400px;
+  max-height: 600px;
+  position: relative;
+}
+
+#img-caption {
+  background: #FFD800;
+  box-shadow: 0 0 5px 1px #000, 3px 3px 5px #000;
+  color: #303030;
+  font-size: 18px;
+  position: absolute;
+  bottom: 5%;
+  left: -90%;
+  max-width: 450px;
+  min-height: 90px;
+  margin: 10px;
+  padding: 10px 15px;
+}
+
+img {
+  border-right: 5px solid #000;
+  border-radius: 10px;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+#title {
+  font-size: 6vw;
+  margin: 0;
+}
+
+#intro-msg {
+  font-size: 1.5vw;
+  margin: 0;
+}
+
+/*========================================*/
+
+/* Tribute Section */
+
+#tribute-info {
+  background: #fff;
+  border-radius: 10px;
+  color: #333;
+  margin: 20px auto;
+  padding: 20px 50px;
+  width: 100%;
+}
+
+#headline {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+ul {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+a, a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.6;
+  transition: .3s;
+}
+
+#video {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+/*========================================*/
+
+/* Footer */
+
+blockquote {
+  background: #FFD800;
+  box-shadow: 0 0 5px 1px #000, 3px 3px 5px #000;
+  color: #303030;
+  font-size: 20px;
+  font-style: italic;
+  margin: 20px auto;
+  padding: 10px 15px;
+  max-width: 600px;
+}
+
+/*========================================*/
+
+/* Media Queries */
+
+@media screen and (max-width: 800px){
+  #landing {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  #title-div {
+    width: 100%;
+  }
+
+  #img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #img-caption {
+    font-size: 16px;
+    position: static;
+    width: 100%;
+  }
+
+  img {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+  #tribute-info {
+    padding: 10px 30px;
+  }
+}
