@@ -52,8 +52,12 @@ body {
 }
 
 #img-div {
-  max-width: 400px;
-  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  height: 100%;
   position: relative;
 }
 
@@ -62,23 +66,19 @@ body {
   box-shadow: 0 0 5px 1px #000, 3px 3px 5px #000;
   color: #303030;
   font-size: 18px;
-  position: absolute;
-  bottom: 5%;
-  left: -90%;
+  position: relative;
+  left: -40%;
   max-width: 450px;
-  min-height: 90px;
-  margin: 10px;
+  min-height: 90px;;
   padding: 10px 15px;
 }
 
 img {
-  border-right: 5px solid #000;
-  border-radius: 10px;
+  box-shadow: 10px -10px #FFD800;
   display: block;
-  height: auto;
   max-width: 100%;
   max-height: 100%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 #title {
@@ -87,7 +87,7 @@ img {
 }
 
 #intro-msg {
-  font-size: 1.5vw;
+  font-size: 2vw;
   margin: 0;
 }
 
@@ -154,7 +154,9 @@ blockquote {
 @media screen and (max-width: 800px){
   #landing {
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    height: auto;
     padding: 0;
   }
 
@@ -163,10 +165,7 @@ blockquote {
   }
 
   #img-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100%;
   }
 
   #img-caption {
@@ -175,18 +174,29 @@ blockquote {
     width: 100%;
   }
 
-  img {
-    width: 70%;
-  }
-
 }
 
 @media screen and (max-width: 500px){
-  #tribute-info {
-    padding: 10px 30px;
+
+  #title {font-size: 8vw;}
+  #intro-msg {font-size: 3vw;}
+
+  img {
+    box-shadow: 4px -4px #FFD800;
   }
 
+  #tribute-info {
+    padding: 10px 0;
+  }
+
+  ul {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  #video {max-width: 100%;}
+
   blockquote {
-    max-width: 100%;
+    max-width: 90%;
   }
 }
